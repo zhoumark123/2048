@@ -1,0 +1,35 @@
+button.hi{
+  background-color: peachpuff;
+  border: lightblue solid 6px;
+  font-size:30px;
+  margin-left: 80px;
+  border-radius:20px;
+  color:#5F87E0;
+
+}
+button.hi:hover{
+  background-color:#E4FF90;
+  border-color:#ACE6C2;
+}
+div>button {
+  width: 130px;
+  height: 130px;
+  margin: 0;
+  background-color: lightsalmon;
+  border: 5px solid chocolate;
+  color:white;
+  font-size:75px;
+  border-radius:0px;
+}
+div{
+  text-align:center
+}
+.big{
+  text-align:center;
+  font-size:100px;
+}
+h1{
+  text-align:center;
+  font-size:80px;
+  color:#102900;
+}
