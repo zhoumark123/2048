@@ -5,15 +5,15 @@ button.hi{
   margin-left: 80px;
   border-radius:20px;
   color:#5F87E0;
-
+  margin-left:630px;
 }
 button.hi:hover{
   background-color:#E4FF90;
   border-color:#ACE6C2;
 }
 div>button {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   margin: 0;
   background-color: lightsalmon;
   border: 5px solid chocolate;
@@ -30,6 +30,11 @@ div{
 }
 h1{
   text-align:center;
-  font-size:80px;
-  color:#102900;
+  font-size:70px;
+  color:#;
+  font-family: 'Courier New';
+  margin-top:0;
+}
+p{
+  margin-bottom:0;
 }
