@@ -118,6 +118,7 @@ function newGame() {
 $(document).keydown(function(e) {
   if (e.which === 38) {
     //up
+    e.preventDefault();
     var w = false;
     for(var r = 1; r<=3; r++){
       for(var c = 0; c <= 3; c++){
@@ -150,6 +151,7 @@ $(document).keydown(function(e) {
 $(document).keydown(function(e) {
   if (e.which === 40) {
     //down
+      e.preventDefault();
     var w = false;
     for(var r = 2; r>=0; r--){
       for(var c = 0; c <= 3; c++){
@@ -183,6 +185,7 @@ $(document).keydown(function(e) {
 $(document).keydown(function(e) {
   if (e.which === 37) {
     //left
+      e.preventDefault();
     var w = false;
     for(var r = 0; r<=3; r++){
       for(var c = 1; c <= 3; c++){
@@ -215,6 +218,7 @@ $(document).keydown(function(e) {
 $(document).keydown(function(e) {
   if (e.which === 39) {
     //right
+      e.preventDefault();
     var w = false;
     for(var r = 3; r>=0; r--){
       for(var c = 2; c >=0; c--){
