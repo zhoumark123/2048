@@ -115,137 +115,153 @@ function newGame() {
   firstRandom();
   lognum();
 }
+function keyup() {
+    var w = false;
+    for (var r = 1; r <= 3; r++) {
+        for (var c = 0; c <= 3; c++) {
+            var number = num[r][c];
+            for (var n = r - 1; n >= 0; n--) {
+                if (number == num[n][c] && number != 0) {
+                    num[n][c] *= 2;
+                    num[n + 1][c] = 0;
+                    w = true;
+                    break;
+                }
+                else if (num[n][c] == 0 && number != 0) {
+                    num[n][c] = number;
+                    num[n + 1][c] = 0;
+                    w = true;
+
+                }
+                else if (number != num[n][c] && num[n][c] != 0 && number != 0) {
+                    break;
+                }
+            }
+        }
+    }
+    if (w) {
+        getRandInt();
+    }
+    lognum();
+}
 $(document).keydown(function(e) {
   if (e.which === 38) {
-    //up
-    e.preventDefault();
-    var w = false;
-    for(var r = 1; r<=3; r++){
-      for(var c = 0; c <= 3; c++){
-        var number = num[r][c];
-        for(var n = r-1; n>=0; n-- ) {
-          if (number == num[n][c] && number != 0) {
-            num[n][c] *= 2;
-            num[n+1][c] = 0;
-            w = true;
-            break;
-          }
-          else if (num[n][c] == 0 && number != 0 ) {
-            num[n][c] = number;
-            num[n+1][c] = 0;
-            w = true;
+      //up
+      e.preventDefault();
 
-          }
-          else if(number != num[n][c] && num[n][c] != 0 && number != 0){
-            break;
-          }
-        }
-      }
-    }
-    if(w){
-      getRandInt();
-    }
-    lognum();
+      keyup();
   }
 });
+function keydown() {
+    var w = false;
+    for (var r = 2; r >= 0; r--) {
+        for (var c = 0; c <= 3; c++) {
+            var number = num[r][c];
+            for (var n = r + 1; n <= 3; n++) {
+                console.log(num);
+                if (number == num[n][c] && number != 0) {
+                    num[n][c] *= 2;
+                    num[n - 1][c] = 0;
+                    w = true;
+                    break;
+                }
+                else if (num[n][c] == 0 && number != 0) {
+                    num[n][c] = number;
+                    num[n - 1][c] = 0;
+                    w = true;
+                }
+                else if (number != num[n][c] && num[n][c] != 0 && number != 0) {
+                    break;
+                }
+            }
+
+        }
+    }
+    if (w) {
+        getRandInt();
+    }
+    lognum();
+}
 $(document).keydown(function(e) {
   if (e.which === 40) {
-    //down
+      //down
       e.preventDefault();
-    var w = false;
-    for(var r = 2; r>=0; r--){
-      for(var c = 0; c <= 3; c++){
-        var number = num[r][c];
-        for(var n = r+1; n<=3; n++ ) {
-          console.log(num);
-          if (number == num[n][c] && number != 0) {
-            num[n][c] *= 2;
-            num[n-1][c] = 0;
-            w = true;
-            break;
-          }
-          else if (num[n][c] == 0 && number != 0 ) {
-            num[n][c] = number;
-            num[n-1][c] = 0;
-            w = true;
-          }
-          else if(number != num[n][c] && num[n][c] != 0 && number != 0){
-            break;
-          }
-        }
 
-      }
-    }
-    if(w){
-      getRandInt();
-    }
-    lognum();
+      keydown();
+
   }
 });
+function keyleft() {
+    var w = false;
+    for (var r = 0; r <= 3; r++) {
+        for (var c = 1; c <= 3; c++) {
+            var number = num[r][c];
+            for (var n = c - 1; n >= 0; n--) {
+                if (number == num[r][n] && number != 0) {
+                    num[r][n] *= 2;
+                    num[r][n + 1] = 0;
+                    w = true;
+                    break;
+                }
+                else if (num[r][n] == 0 && number != 0) {
+                    num[r][n] = number;
+                    num[r][n + 1] = 0;
+                    w = true;
+                }
+                else if (num[r][n] != 0 && number != num[r][n] && number != 0) {
+                    break;
+                }
+            }
+
+        }
+    }
+    if (w) {
+        getRandInt();
+    }
+    lognum();
+}
 $(document).keydown(function(e) {
   if (e.which === 37) {
-    //left
+      //left
       e.preventDefault();
-    var w = false;
-    for(var r = 0; r<=3; r++){
-      for(var c = 1; c <= 3; c++){
-        var number = num[r][c];
-        for(var n = c-1; n>=0; n-- ) {
-          if (number == num[r][n] && number != 0 ) {
-            num[r][n] *= 2;
-            num[r][n+1] = 0;
-            w = true;
-            break;
-          }
-          else if (num[r][n] == 0 && number != 0) {
-            num[r][n] = number;
-            num[r][n+1] = 0;
-            w = true;
-          }
-          else if(num[r][n] != 0 && number != num[r][n] && number != 0){
-            break;
-          }
-        }
-
-      }
-    }
-    if(w){
-      getRandInt();
-    }
-    lognum();
+      keyleft();
   }
 });
-$(document).keydown(function(e) {
-  if (e.which === 39) {
-    //right
-      e.preventDefault();
+function keyright() {
     var w = false;
-    for(var r = 3; r>=0; r--){
-      for(var c = 2; c >=0; c--){
-        var number = num[r][c];
-        for(var n = c+1; n<=3; n++ ) {
-          console.log(num);
-          if (number == num[r][n] && number != 0) {
-            num[r][n] *= 2;
-            num[r][n-1] = 0;
-            w = true;
-            break;
-          }
-          else if (num[r][n] == 0 && number != 0) {
-            num[r][n] = number;
-            num[r][n-1] = 0;
-            w = true;
-          }
-          else if(num[r][n] != 0 && number != num[r][n]&& number != 0){
-            break;
-          }
-        }
+    for (var r = 3; r >= 0; r--) {
+        for (var c = 2; c >= 0; c--) {
+            var number = num[r][c];
+            for (var n = c + 1; n <= 3; n++) {
+                console.log(num);
+                if (number == num[r][n] && number != 0) {
+                    num[r][n] *= 2;
+                    num[r][n - 1] = 0;
+                    w = true;
+                    break;
+                }
+                else if (num[r][n] == 0 && number != 0) {
+                    num[r][n] = number;
+                    num[r][n - 1] = 0;
+                    w = true;
+                }
+                else if (num[r][n] != 0 && number != num[r][n] && number != 0) {
+                    break;
+                }
+            }
 
-      }
+        }
     }
-    if(w){
-      getRandInt();
+    if (w) {
+        getRandInt();
     }
     lognum();
+}
+$(document).keydown(function(e) {
+  if (e.which === 39) {
+      //right
+      e.preventDefault();
+
+      keyright();
   }
 });
