@@ -1,23 +1,29 @@
 button.hi{
   background-color: peachpuff;
   border: lightblue solid 6px;
-  font-size:30px;
+  font-size:20px;
   border-radius:20px;
   color:#5F87E0;
-  margin-left:710px;
+
+  width:130px;
+  height:40px;
+}
+div.button{
+  text-align:center;
+
 }
 button.hi:hover{
   background-color:#E4FF90;
   border-color:#ACE6C2;
 }
 div>button {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   margin: 0;
   background-color: lightsalmon;
   border: 5px solid chocolate;
   color:white;
-  font-size:80px;
+  font-size:68px;
   border-radius:0;
 }
 div{
@@ -31,7 +37,7 @@ h1{
   text-align:center;
   font-size:80px;
   color: #de9e2f;
-  font-family: "Adobe Garamond Pro";
+  font-family: "Courier New";
   margin-top:0;
 }
 p{
