@@ -18,17 +18,22 @@ button.hi:hover{
   background-color:#E4FF90;
   border-color:#ACE6C2;
 }
-div>button {
+div.innertile {
   width: 120px;
   height: 120px;
-  margin: 0;
+  margin: 0px;
   background-color: lightsalmon;
   border: 5px solid chocolate;
   color:white;
-  font-size:68px;
+  font-size:60px;
+  padding-top:10px;
   border-radius:0;
   font-family: "Courier New";
   font-weight:bold;
+  display:inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
 }
 div{
   text-align:center

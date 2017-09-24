@@ -7,54 +7,41 @@
 </head>
 <body>
 <h1><strong>2048</strong></h1>
-<div class='button'>
+<div class='div'>
 <button class = 'hi' onclick = 'newGame();'><strong>New Game</strong></button>
 </div>
 <div id="boxes">
+  <table>
   <div class="div">
-    <button id="00" onclick=""> 0 </button>
-    <button id="01" onclick="">  0</button>
-    <button id="02" onclick=""> 0 </button>
-    <button id="03" onclick="">  0</button>
+    <div id="00" class="innertile"> 0 </div>
+    <div id="01" class="innertile"> 0 </div>
+    <div id="02" class="innertile"> 0 </div>
+    <div id="03" class="innertile"> 0 </div>
   </div>
 
 
   <div class="div">
-    <button id="10" onclick=""> 0 </button>
-    <button id="11" onclick=""> 0 </button>
-    <button id="12" onclick=""> 0 </button>
-    <button id="13" onclick=""> 0 </button>
+    <div id="10" class="innertile"> 0 </div>
+    <div id="11" class="innertile"> 0 </div>
+    <div id="12" class="innertile"> 0 </div>
+    <div id="13" class="innertile"> 0 </div>
   </div>
 
   <div class="div">
-    <button id="20" onclick="">0  </button>
-    <button id="21" onclick="">0 </button>
-    <button id="22" onclick="">0  </button>
-    <button id="23" onclick="">0  </button>
+    <div id="20" class="innertile">0  </div>
+    <div id="21" class="innertile">0 </div>
+    <div id="22" class="innertile">0  </div>
+    <div id="23" class="innertile">0  </div>
   </div>
   <div class="div">
-    <button id="30" onclick="">0  </button>
-    <button id="31" onclick="">0  </button>
-    <button id="32" onclick="">0  </button>
-    <button id="33" onclick="">0  </button>
+    <div id="30" class="innertile">0  </div>
+    <div id="31" class="innertile">0  </div>
+    <div id="32" class="innertile">0  </div>
+    <div id="33" class="innertile">0  </div>
   </div>
 
 </div>
-<div class='table'>
-<table align='center'>
-  <tr>
-    <td></td>
-  <td><button style="display:block;" class = 'hi' onclick="keyup();">up</button></td>
-    <td></td>
-</tr>
-<tr>
-  <td><button style="display:inline" class = 'hi' onclick="keyleft();">left</button></td>
-  <td><button style="display:inline" class = 'hi' onclick="keydown();">down</button></td>
-  <td><button style="display:block;" class = 'hi' onclick="keyright();">right</button></td>
-</tr>
-</table>
-</div>
-<p>HOW TO PLAY: Use your arrow keys, buttons or swipe to move the tiles. When two tiles with the same number touch, they merge into one! When you get a 2048 block, you win!</p>
+<p>HOW TO PLAY: Use your arrow keys or swipe to move the tiles. When two tiles with the same number touch, they merge into one! When you get a 2048 block, you win!</p>
 
 <p>Website created by Mark Zhou</p>
 

@@ -31,9 +31,17 @@ function lognum(){
     for(var c = 0; c <= 3; c ++){
 
       $('#'+r + c).text(num[r][c]);
-      //if(num[r][c] == 0){
-       // $('#'+r+c).text('');
-      //}
+      if(num[r][c] < 100 ){
+        $('#'+r+c).css('font-size','68px');
+      }
+      if(num[r][c] < 1000 && num[r][c] > 100){
+        $('#'+r+c).css('font-size','58px');
+        $('#'+r+c).css('margin','0px');
+      }
+      if(num[r][c] > 1000){
+        $('#'+r+c).css('font-size','40px');
+        $('#'+r+c).css('margin','0px');
+      }
       if(num[r][c] == 0){
         $('#'+r + c).css('background-color','peachpuff');
         $('#'+r + c).css('color','transparent');
