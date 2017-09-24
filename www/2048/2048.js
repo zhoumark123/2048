@@ -317,8 +317,8 @@ function swipedetect(el, callback){
 
 var el = document.getElementById('boxes');
 swipedetect(el, function(swipedir){
-    // swipedir contains either "none", "left", "right", "top", or "down"
-    if (swipedir == "top"){
+    // swipedir contains either "none", "left", "right", "up", or "down"
+    if (swipedir == "up"){
       keyup();
     }
     else if(swipedir == 'down'){
