@@ -27,10 +27,12 @@ function firstRandom() {
   console.log(num);
 }
 function lognum(){
+  var zero = false;
   for(var r = 0; r<=3; r ++){
     for(var c = 0; c <= 3; c ++){
 
       $('#'+r + c).text(num[r][c]);
+
       if(num[r][c] < 100 ){
         $('#'+r+c).css('font-size','68px');
       }
@@ -45,6 +47,7 @@ function lognum(){
       if(num[r][c] == 0){
         $('#'+r + c).css('background-color','peachpuff');
         $('#'+r + c).css('color','transparent');
+        zero = true;
       }
       if(num[r][c] == 2){
         $('#'+r + c).css('background-color','#bec300');
@@ -97,6 +100,9 @@ function lognum(){
       }
 
     }
+  }
+  if(zero == false && w == false){
+    /*$('#lose').val*/alert('Sorry you lost. But this game is really hard. Try again next time!');
   }
 }
 

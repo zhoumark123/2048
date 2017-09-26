@@ -4,14 +4,14 @@ button.hi{
   font-size:20px;
   border-radius:20px;
   color:#5F87E0;
-  font-family: "Courier New";
-  width:130px;
-  height:40px;
+  font-family: lato;
+  width:140px;
+  height:50px;
   font-weight:bold;
 }
 div.button{
   text-align:center;
-  font-family: "Courier New";
+  font-family: lato;
 
 }
 button.hi:hover{
@@ -28,7 +28,7 @@ div.innertile {
   font-size:60px;
   padding-top:10px;
   border-radius:0;
-  font-family: "Courier New";
+  font-family: lato;
   font-weight:bold;
   display:inline-block;
   text-align: center;
@@ -46,12 +46,12 @@ h1{
   text-align:center;
   font-size:80px;
   color: #de9e2f;
-  font-family: "Courier New";
+  font-family: lato;
   margin-top:0;
 }
 p{
   margin-bottom:0;
-  font-family: "Courier New";
+  font-family: lato;
   font-weight:bold;
   color:#576296;
 }
