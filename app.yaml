@@ -10,3 +10,6 @@ handlers:
 - url: /2048
   static_dir: www/2048
 
+- url: /spaceGame
+  static_dir: www/spaceGame
+
