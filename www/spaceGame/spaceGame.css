@@ -1,0 +1,35 @@
+canvas {
+
+    background-color:#575757;
+    position:relative;
+
+
+
+
+}
+div{
+  background-color: black;
+}
+button{
+  display: none;
+}
+button{
+  position:absolute;;
+  background-color: peachpuff;
+  border: lightblue solid 6px;
+  font-size:40px;
+  border-radius:20px;
+  color:#5F87E0;
+  font-family: lato;
+  width:300px;
+  height:80px;
+  font-weight:bold;
+  top:400px;
+  left:565px;
+
+}
+
+button:hover{
+  background-color:#E4FF90;
+  border-color:#ACE6C2;
+}

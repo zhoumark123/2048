@@ -26,6 +26,66 @@ function firstRandom() {
   log(rand2);
   console.log(num);
 }
+function check(){
+
+  //keyup
+  for (var r = 1; r <= 3; r++) {
+      for (var c = 0; c <= 3; c++) {
+        var number = num[r][c];
+        for (var n = r - 1; n >= 0; n--) {
+        if (number != num[n][c] && num[n][c] != 0 && number != 0) {
+            break;
+        }
+        else{
+          return
+        }
+      }
+      }
+  }
+  //keydown
+  for (var r = 2; r >= 0; r--) {
+      for (var c = 0; c <= 3; c++) {
+          var number = num[r][c];
+          for (var n = r + 1; n <= 3; n++) {
+            if (number != num[n][c] && num[n][c] != 0 && number != 0) {
+                break;
+            }
+            else{
+              return;
+            }
+          }
+      }
+    }
+  //keyleft
+  for (var r = 0; r <= 3; r++) {
+      for (var c = 1; c <= 3; c++) {
+          var number = num[r][c];
+          for (var n = c - 1; n >= 0; n--) {
+            if (num[r][n] != 0 && number != num[r][n] && number != 0) {
+                break;
+            }
+            else{
+              return;
+            }
+          }
+      }
+  }
+  //keyright
+  for (var r = 3; r >= 0; r--) {
+      for (var c = 2; c >= 0; c--) {
+          var number = num[r][c];
+          for (var n = c + 1; n <= 3; n++) {
+            if (num[r][n] != 0 && number != num[r][n] && number != 0) {
+                break;
+            }
+            else{
+              return
+            }
+          }
+      }
+  }
+  $("#lose").style.display = "block";
+}
 function lognum(){
   var zero = false;
   for(var r = 0; r<=3; r ++){
@@ -101,8 +161,8 @@ function lognum(){
 
     }
   }
-  if(zero == false && w == false){
-    /*$('#lose').val*/alert('Sorry you lost. But this game is really hard. Try again next time!');
+  if(zero == false){
+    check();
   }
 }
 
@@ -126,6 +186,7 @@ function newGame() {
       num[r][c] = 0;
     }
   }
+  $("#lose").text('');
   firstRandom();
   lognum();
 }
